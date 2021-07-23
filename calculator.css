@@ -1,0 +1,88 @@
+*{
+    box-sizing: border-box;
+
+}
+
+h1{
+    color: azure;
+}
+
+body{
+    min-height: 100vh;
+    background: rgba(52, 141, 169, 1);
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.mainParent{
+    width:500px;
+    background: rgba(104, 103, 171, 0.61);
+    margin-top:5rem;
+    padding:3rem;
+}
+
+.result{
+    border: 1px solid;
+    line-height:3rem;
+    margin-bottom: 2rem;
+    width: 100%;
+    background: rgba(201, 239, 251, 1);
+    
+    display:flex;
+    flex-direction: row-reverse;
+    
+    box-shadow: -5px 5px 15px;
+    padding: 1rem;
+    font-size:3rem;
+    border-radius: 3px;
+}
+
+
+
+.items{
+    display: grid;
+    gap:1.5rem;
+    grid-template-columns: auto;
+    grid-template-areas: 
+    "clear no-0 add divide"
+    "no-7 no-8 no-9 multiply"
+    "no-4 no-5 no-6 minus"
+    "no-1 no-2 no-3 ans"
+    ;
+}
+
+.items>*{
+    border-radius: 3px;
+    width:80px;
+    height:80px;
+    font-size: 30px;
+    box-shadow: -5px 5px 15px;
+    background: rgba(201, 239, 251, 1);
+}
+
+
+
+.clear{
+    grid-area: clear;
+}
+
+.no-0
+{grid-area: no-0;}
+
+.add{grid-area: add;}
+.minus{grid-area: minus;}
+.multiply{grid-area: multiply;}
+.divide{grid-area:divide;}
+.ans{grid-area: ans;}
+.no-1{grid-area: no-1;}
+.no-2{grid-area: no-2;}
+.no-3{grid-area: no-3;}
+.no-4{grid-area: no-4;}
+.no-5{grid-area: no-5;}
+.no-6{grid-area: no-6;}
+.no-7{grid-area: no-7;}
+.no-8{grid-area: no-8;}
+.no-9{grid-area: no-9;}
