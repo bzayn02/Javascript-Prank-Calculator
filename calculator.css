@@ -19,6 +19,7 @@ body{
 
 .mainParent{
     width:500px;
+    border-radius: 10px;
     background: rgba(104, 103, 171, 0.61);
     margin-top:5rem;
     padding:3rem;
@@ -37,7 +38,7 @@ body{
     box-shadow: -5px 5px 15px;
     padding: 1rem;
     font-size:3rem;
-    border-radius: 3px;
+    border-radius: 10px;
 }
 
 
@@ -46,36 +47,35 @@ body{
     display: grid;
     gap:1.5rem;
     grid-template-columns: auto;
+    
     grid-template-areas: 
-    "clear no-0 add divide"
+    "clear clean off off"
     "no-7 no-8 no-9 multiply"
     "no-4 no-5 no-6 minus"
     "no-1 no-2 no-3 ans"
-    ;
+    "no-0 add divide ans";
 }
 
 .items>*{
-    border-radius: 3px;
-    width:80px;
-    height:80px;
+    border-radius: 10px;
+    min-width: 80px;
+    min-height:80px;
     font-size: 30px;
-    box-shadow: -5px 5px 15px;
+    box-shadow: -10px 10px 15px;
     background: rgba(201, 239, 251, 1);
 }
 
 
 
-.clear{
-    grid-area: clear;
-}
-
-.no-0
-{grid-area: no-0;}
-
+.clear{grid-area: clear;}
+.clean{grid-area: clean;}
 .add{grid-area: add;}
+.divide{grid-area:divide;}
+.no-0{grid-area: no-0;}
+
 .minus{grid-area: minus;}
 .multiply{grid-area: multiply;}
-.divide{grid-area:divide;}
+
 .ans{grid-area: ans;}
 .no-1{grid-area: no-1;}
 .no-2{grid-area: no-2;}
@@ -86,3 +86,6 @@ body{
 .no-7{grid-area: no-7;}
 .no-8{grid-area: no-8;}
 .no-9{grid-area: no-9;}
+
+.off {grid-area: off;
+    background-color:rgb(180, 137, 126);}
